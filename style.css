@@ -1,0 +1,48 @@
+/*
+Theme Name: Blue Authentic
+Theme URI: https://github.com/a-dridi
+Author: Abderraouf Dridi
+Author URI: https://github.com/a-dridi
+GitHub Theme URI: https://github.com/a-dridi
+Description: A responsive wordpress theme with blue as the main color. 
+Version: 1.0.0
+License: This custom theme is distributed under the terms of the GNU GPL version 2
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bluethentic
+Tags: one-column, responsive, slide menu
+
+This theme, like WordPress, is licensed under the GPL.
+
+Resource Licenses:
+Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
+and of course
+jQuery: https://jquery.org | (Code licensed under MIT)
+WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
+*/
+
+#wrapper-navbar > #main-nav{
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#wrapper-navbar > #main-nav > ul > li > a {
+    font-size: 22px; 
+}
+
+#wrapper-navbar > #main-nav > ul > li > a:hover {
+    border-bottom: 1px solid #808080;
+}
+
+#wrapper-navbar > #main-nav > ul > li > a > .current_page_item{
+    color: #80ddff;
+}
+
+#top-header{
+    display: flex;
+    flex: auto;
+}
+
+#top-header > div {
+    flex-wrap: wrap;
+}
