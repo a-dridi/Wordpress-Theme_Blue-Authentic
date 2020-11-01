@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#top-header{
+    padding: 10px !important;
+    background-color: rgba(130, 178, 255, 0.541);
+}
+
+
+
+#wrapper-navbar {
+    #main-nav {
+        border-top: 1px solid $border-gray;
+        border-bottom: 1px solid $border-gray;
+
+        ul {
+            li {
+                a {
+                    font-size: 22px;
+                }
+                a:hover {
+                    border-bottom: 1px solid #808080;
+                }
+                &.current_page_item {
+                    a {
+                        color: $main-website-color;
+                        font-style: bold;
+                    }
+                }
+            }
+        }
+    }
+}
