@@ -15,8 +15,8 @@ while ( have_posts() ) {
 
 the_posts_pagination(
 	array(
-		'prev_next' => __( '< Prev. Page' ),
-		'next_text' => __( '> Next Page' ),
+		'prev_text' => __( '< Prev. Page', 'textdomain' ),
+		'next_text' => __( '> Next Page', 'textdomain' ),
 	)
 );
 

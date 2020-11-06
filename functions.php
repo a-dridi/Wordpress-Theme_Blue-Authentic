@@ -93,7 +93,7 @@ add_action( 'admin_menu', 'blueauthentic_add_theme_menu_item' );
  */
 
 function social_facebook_option_callback() {
-	$facebook_option_value = get_option( 'social_facebook_option' );
+	$facebook_option_value = get_option( 'blueauthentic_social_facebook_option' );
 	if ( ! empty( $facebook_option_value ) ) {
 		echo '<input name="social_facebook_option" id="social_facebook_option" type="text" value="' . $facebook_option_value . '" class="code" />';
 	} else {
@@ -102,20 +102,20 @@ function social_facebook_option_callback() {
 }
 
 function social_twitter_option_callback() {
-	 $twitter_option_value = get_option( 'social_twitter_option' );
+	 $twitter_option_value = get_option( 'blueauthentic_social_twitter_option' );
 	if ( ! empty( $twitter_option_value ) ) {
-		echo '<input name="social_twitter_option" id="social_twitter_option" type="text" value="' . $twitter_option_value . '" class="code" />';
+		echo '<input name="blueauthentic_social_twitter_option" id="blueauthentic_social_twitter_option" type="text" value="' . $twitter_option_value . '" class="code" />';
 	} else {
-		echo '<input name="social_twitter_option" id="social_twitter_option" type="text" value="" class="code"/> ';
+		echo '<input name="blueauthentic_social_twitter_option" id="blueauthentic_social_twitter_option" type="text" value="" class="code"/> ';
 	}
 }
 
 function social_youtube_option_callback() {
-	 $youtube_option_value = get_option( 'social_youtube_option' );
+	 $youtube_option_value = get_option( 'blueauthentic_social_youtube_option' );
 	if ( ! empty( $youtube_option_value ) ) {
-		echo '<input name="social_youtube_option" id="social_youtube_option" type="text" value="' . $youtube_option_value . '" class="code" />';
+		echo '<input name="blueauthentic_social_youtube_option" id="blueauthentic_social_youtube_option" type="text" value="' . $youtube_option_value . '" class="code" />';
 	} else {
-		echo '<input name="social_youtube_option" id="social_youtube_option" type="text" value="" class="code"/> ';
+		echo '<input name="blueauthentic_social_youtube_option" id="blueauthentic_social_youtube_option" type="text" value="" class="code"/> ';
 	}
 }
 
@@ -131,35 +131,35 @@ function blueauthentic_theme_settings() {
 		'theme-options-section-social'
 	);
 
-	add_option( 'social_facebook_option', '' );
+	add_option( 'blueauthentic_social_facebook_option', '' );
 	add_settings_field(
-		'social_facebook_option',
+		'blueauthentic_social_facebook_option',
 		'Facebook Account',
 		'social_facebook_option_callback',
 		'theme-options-section-social',
 		'social_section'
 	);
-	register_setting( 'theme-options-group-social', 'social_facebook_option' );
+	register_setting( 'theme-options-group-social', 'blueauthentic_social_facebook_option' );
 
-	add_option( 'social_twitter_option', '' );
+	add_option( 'blueauthentic_social_twitter_option', '' );
 	add_settings_field(
-		'social_twitter_option',
+		'blueauthentic_social_twitter_option',
 		'Twitter Account',
 		'social_twitter_option_callback',
 		'theme-options-section-social',
 		'social_section'
 	);
-	register_setting( 'theme-options-group-social', 'social_twitter_option' );
+	register_setting( 'theme-options-group-social', 'blueauthentic_social_twitter_option' );
 
-	add_option( 'social_youtube_option', '' );
+	add_option( 'blueauthentic_social_youtube_option', '' );
 	add_settings_field(
-		'social_youtube_option',
+		'blueauthentic_social_youtube_option',
 		'Youtube Account',
 		'social_youtube_option_callback',
 		'theme-options-section-social',
 		'social_section'
 	);
-	register_setting( 'theme-options-group-social', 'social_youtube_option' );
+	register_setting( 'theme-options-group-social', 'blueauthentic_social_youtube_option' );
 }
 add_action( 'admin_init', 'blueauthentic_theme_settings' );
 

@@ -1,6 +1,7 @@
 # Wordpress Theme - Blue Authentic
 
 * IN DEVELOPMENT 
+
 A responsive theme for your Wordpress website. It has parallax scroll effect and a unique menu. 
 
 ![Screenshot of Wordpress Theme](https://raw.githubusercontent.com/a-dridi/Wordpress-Theme_Blue-Authentic/master/screenshot1.PNG)
