@@ -38,6 +38,8 @@ add_action( 'wp_enqueue_scripts', 'blueauthentic_load_styles' );
  */
 function blueauthentic_load_scripts() {
 	wp_enqueue_script( 'blueauthentic-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), '3.5.1', true );
+	wp_enqueue_script( 'blueauthentic-main-container-js', get_template_directory_uri(  ) . '/js/frontpage-main-container.js', array(), '1.0.0', true );
+	wp_enqueue_script('blueauthentic-numbers-counter-js', get_template_directory_uri() . '/js/numbers-counter.js')
 }
 add_action( 'wp_enqueue_scripts', 'blueauthentic_load_scripts' );
 

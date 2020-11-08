@@ -20,29 +20,3 @@ and of course
 jQuery: https://jquery.org | (Code licensed under MIT)
 WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
 */
-
-#wrapper-navbar > #main-nav{
-    border-top: 1px solid #f0f0f0;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-#wrapper-navbar > #main-nav > ul > li > a {
-    font-size: 22px; 
-}
-
-#wrapper-navbar > #main-nav > ul > li > a:hover {
-    border-bottom: 1px solid #808080;
-}
-
-#wrapper-navbar > #main-nav > ul > li > a > .current_page_item{
-    color: #80ddff;
-}
-
-#top-header{
-    display: flex;
-    flex: auto;
-}
-
-#top-header > div {
-    flex-wrap: wrap;
-}

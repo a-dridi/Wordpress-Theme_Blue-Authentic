@@ -25,3 +25,62 @@
   color: #4576f5;
   font-style: bold;
 }
+
+#main {
+  padding: 15px;
+}
+
+.main-container {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 5px;
+  background: rgba(234, 246, 248, 0.75);
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.featured-container::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: url("../img/main_container_bg.PNG") no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+#numbers-counter-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: auto;
+  align-items: center;
+}
+
+#numbers-counter-container div {
+  margin: 15px;
+  align-self: center;
+  display: block;
+}
+
+#sidebar {
+  padding: 15px;
+}
+
+#sidebar ul {
+  list-style-type: none;
+}
+
+.footer-container {
+  padding: 10px;
+  text-align: center;
+}
