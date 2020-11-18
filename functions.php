@@ -7,6 +7,9 @@
 
 defined( 'ABSPATH' ) || exit;
 
+require 'real_estate_description_meta_box.php';
+require 'real_estate_search.php';
+
 function load_include_files() {
 
 	$theme_include_path = get_template_directory() . '/include/';
@@ -38,8 +41,8 @@ add_action( 'wp_enqueue_scripts', 'blueauthentic_load_styles' );
  */
 function blueauthentic_load_scripts() {
 	wp_enqueue_script( 'blueauthentic-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), '3.5.1', true );
-	wp_enqueue_script( 'blueauthentic-main-container-js', get_template_directory_uri(  ) . '/js/frontpage-main-container.js', array(), '1.0.0', true );
-	wp_enqueue_script('blueauthentic-numbers-counter-js', get_template_directory_uri() . '/js/numbers-counter.js')
+	wp_enqueue_script( 'blueauthentic-main-container-js', get_template_directory_uri() . '/js/frontpage-main-container.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'blueauthentic-numbers-counter-js', get_template_directory_uri() . '/js/numbers-counter.js' );
 }
 add_action( 'wp_enqueue_scripts', 'blueauthentic_load_scripts' );
 
@@ -126,6 +129,12 @@ function social_youtube_option_callback() {
  * Add all settings sections and their settings options to the settings page
  */
 function blueauthentic_theme_settings() {
+	blueauthentic_social_settings();
+	blueauthentic_frontpage_settings();
+}
+add_action( 'admin_init', 'blueauthentic_theme_settings' );
+
+function blueauthentic_social_settings() {
 	add_settings_section(
 		'social_section',
 		'Social Media Account Links/URLs',
@@ -162,7 +171,30 @@ function blueauthentic_theme_settings() {
 		'social_section'
 	);
 	register_setting( 'theme-options-group-social', 'blueauthentic_social_youtube_option' );
+
 }
-add_action( 'admin_init', 'blueauthentic_theme_settings' );
+
+function blueauthentic_frontpage_settings() {
+
+	add_settings_section(
+		'typedtext_section',
+		'Front Page - Typed Text Words',
+		'blueauthentic_typedtext_section_description',
+		'theme-options-section-typedtext'
+	);
+
+	add_option( 'blueauthentic_frontpage_typedtext1', 'affordable flat' );
+	add_settings_field(
+		'blueauthentic_frontpage_typedtext1',
+		'Typed Text 1',
+		'frontpage_typedtext1_option_callback',
+		'theme-options-section-typedtext',
+		'typedtext_section'
+	);
+	register_setting( 'theme-options-section-typedtext', 'blueauthentic_frontpage_typedtext1' );
+
+}
+
+
 
 ?>

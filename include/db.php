@@ -32,19 +32,15 @@ function get_property_by_flat_type( $flat_type ) {
  */
 function get_property_by_flat_type( $flat_type ) {
 
-	return $wpdb->get_results(
-		$wpdb->prepare( 'SELECT * FROM {TABLE_PREFIX}property WHERE property_type = %s', $flat_type )
+	return $GLOBALS['wpdb']->get_results(
+		$GLOBALS['wpdb']->prepare( 'SELECT * FROM {TABLE_PREFIX}property WHERE property_type = %s', $flat_type )
 	);
 }
 
 function get_row_count_by_flat_type( $flat_type ) {
 
-	return $wpdb->get_var(
-		$wpdb->prepare( 'SELECT COUNT(*) FROM {TABLE_PREFIX}property WHERE property_type = %s', $flat_type )
-	);
-
+	return $GLOBALS['wpdb']->get_var( $GLOBALS['wpdb']->prepare( 'SELECT COUNT(*) FROM {TABLE_PREFIX}property WHERE property_type = %s', $flat_type ) );
 }
-
 
 
 

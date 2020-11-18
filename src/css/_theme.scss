@@ -3,8 +3,8 @@
     padding: 0;
 }
 
-#top-header{
-    padding: 10px !important;
+#top-header {
+    padding: 15px 25px !important;
     background-color: rgba(130, 178, 255, 0.541);
 }
 
@@ -36,13 +36,18 @@
     padding: 15px;
 }
 
-.main-container {
+#main-container {
+    text-align: center;
+}
+
+#main-container {
     height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
     margin: auto;
     padding: 5px;
+    margin-top: 0px;
     background: rgba(234, 246, 248, 0.75);
     justify-content: center;
     align-items: center;
@@ -53,8 +58,8 @@
     overflow: hidden;
 }
 
-.featured-container::before {
-    content: '';
+#main-container::before {
+    content: "";
     height: 100%;
     width: 100%;
     position: absolute;
@@ -65,15 +70,46 @@
     background-attachment: fixed;
 }
 
+.main-container-slogan .cursor {
+    display: inline-block;
+    background-color: rgb(37, 35, 35);
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: cursor-blink 1s infinite;
+}
+
+.main-container-slogan .typing {
+    animation: none;
+}
+
+@keyframes cursor-blink {
+    0% {
+        background-color: rgb(37, 35, 35);
+    }
+    49% {
+        background-color: rgb(37, 35, 35);
+    }
+    50% {
+        background-color: transparent;
+    }
+    99% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: rgb(37, 35, 35);
+    }
+}
+
 #numbers-counter-container {
     display: flex;
     flex-wrap: wrap;
-    flex: auto;
+    text-align: center;
     align-items: center;
+    justify-self: center;
 
     div {
         margin: 15px;
-        align-self: center;
+        flex: 30%;
         display: block;
     }
 }
@@ -85,8 +121,46 @@
     }
 }
 
-.footer-container{
+.footer-container {
     padding: 10px;
     text-align: center;
 }
 
+.postbox {
+    border: 1px solid darkgray;
+}
+
+.meta-box-field {
+    margin-bottom: 5px;
+    padding: 5px;
+
+    label {
+        margin-right: 3px;
+    }
+}
+
+#real-estate-search-form {
+    margin-top: 55px !important;
+    background-color: rgba(130, 178, 255, 1) !important;
+    padding: 25px !important;
+
+    input {
+        margin-right: 0px;
+    }
+
+    button {
+        padding: 0px 15px;
+        background-color: green;
+        color: white;
+        border: none;
+        text-transform: uppercase;
+    }
+
+    button:hover {
+        background-color: white;
+        color: black;
+        padding: 0px 13px;
+        border: 2px solid green;
+        transition: all 0.5s;
+    }
+}

@@ -1,9 +1,7 @@
 <?php
 
-// Access database thorugh WordPress db object
-global $wpdb;
 // prefix of tables that are used by these WordPress theme
-define( 'TABLE_PREFIX' = 'ba_' );
+define( 'TABLE_PREFIX', 'ba_' );
 
 /**
  * Set up database connection manual - optional

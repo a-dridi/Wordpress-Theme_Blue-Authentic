@@ -4,7 +4,12 @@
 (function mainContainerTextAnimation(){
 
     //CHANGE THIS TO TEXT CONTENT OF INDEX.HTML
-    const textArray = ["affordable flat", "duplex", "holiday house", "modern studio appartment", "ranch-style house"];
+    const typedtextDisplay = document.getElementById("typedtext-cursor");
+    const textArray = ["","","",""];
+    textArray[0] = typedtextDisplay.getAttribute("typedtext1");
+    textArray[1] = typedtextDisplay.getAttribute("typedtext2");
+    textArray[2] = typedtextDisplay.getAttribute("typedtext3");
+    textArray[3] = typedtextDisplay.getAttribute("typedtext4");
 
     const typedTextSpan = document.querySelector(".typing-text");
     const cursorSpan = document.querySelector(".cursor");
