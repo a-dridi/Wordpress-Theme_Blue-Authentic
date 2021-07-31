@@ -3,7 +3,7 @@
 * IN DEVELOPMENT 
 A responsive theme for your Wordpress website. It has parallax scroll effect and a unique menu. 
 
-![Screenshot of Wordpress Plugin](https://raw.githubusercontent.com/a-dridi/Wordpress-Theme_Blue-Authentic/master/screenshot1.PNG)
+![Screenshot of Wordpress Theme Blue Authentic](https://raw.githubusercontent.com/a-dridi/Wordpress-Theme_Blue-Authentic/master/screenshot.png)
 
 This themse is for Wordpress 3.3.7+
 
